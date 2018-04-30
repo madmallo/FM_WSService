@@ -15,9 +15,12 @@ namespace FM_WSService
       static void Main()
       {
          ServiceBase[] ServicesToRun;
+
+         Service1 FMSample = new Service1();
+
          ServicesToRun = new ServiceBase[]
          {
-                new Service1()
+                FMSample
          };
          ServiceBase.Run(ServicesToRun);
       }

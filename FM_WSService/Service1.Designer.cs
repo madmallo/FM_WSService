@@ -28,10 +28,33 @@
       /// </summary>
       private void InitializeComponent()
       {
-         components = new System.ComponentModel.Container();
+         this.components = new System.ComponentModel.Container();
+         this.FMTimer = new System.Windows.Forms.Timer(this.components);
+         this.FMBrowser = new System.Windows.Forms.WebBrowser();
+         // 
+         // FMTimer
+         // 
+         this.FMTimer.Enabled = true;
+         this.FMTimer.Tick += new System.EventHandler(this.FMTimer_Tick);
+         // 
+         // FMBrowser
+         // 
+         this.FMBrowser.Location = new System.Drawing.Point(0, 0);
+         this.FMBrowser.MinimumSize = new System.Drawing.Size(20, 20);
+         this.FMBrowser.Name = "FMBrowser";
+         this.FMBrowser.Size = new System.Drawing.Size(250, 250);
+         this.FMBrowser.TabIndex = 0;
+         this.FMBrowser.Visible = false;
+         // 
+         // Service1
+         // 
          this.ServiceName = "Service1";
+
       }
 
       #endregion
+
+      private System.Windows.Forms.Timer FMTimer;
+      private System.Windows.Forms.WebBrowser FMBrowser;
    }
 }
